@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./webfonts/Montserrat.css">
+</head>
+
+<body>
+    <div id="startEndGame" class="place_startgame">
+        <div class="box_start_end_game">
+            <img class="start_end_game_img" src="./img/rules.jpg">
+            <Button onclick="startGame()" class="gamestart"><span>Start The Game</span> </Button>
+        </div>
+    </div>
+    <div id="placeQuiz" class="place_quiz d-none">
+        <div id="previousQuiz" class="quiz_box-1 quiz_box quiz_box_transparent"></div>
+        <div id="quiz" class="quiz_box-2 quiz_box">
+
+        </div>
+        <div id="nextQuiz" class="quiz_box-3 quiz_box ">
+
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
