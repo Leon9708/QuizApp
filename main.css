@@ -22,14 +22,15 @@ button:hover {
 
 .place_startgame {
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .box_start_end_game {
-    height: 50vh;
-    width: 50vw;
+    height: 60vh;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +46,13 @@ button:hover {
     object-fit: cover;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+}
+
+.box_endmessage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .gamestart {
@@ -91,9 +99,9 @@ button:hover {
     height: 100vh;
     width: 90%;
     display: grid;
-    grid-template-columns: 1fr 2.3fr 1fr;
-    grid-template-rows: 550px;
-    gap: 10rem;
+    grid-template-columns: 1.1fr 2.5fr 1.1fr;
+    grid-template-rows: 575px;
+    gap: 5rem;
     align-content: center;
 }
 
@@ -121,7 +129,7 @@ button:hover {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .box_progressbar {
@@ -152,7 +160,7 @@ button:hover {
     height: fit-content;
     padding: 0.5rem 1.5rem;
     margin-top: 1rem;
-    background-color: rgb(83, 214, 198);
+    background-color: #53d6c6;
     border: solid 1px rgba(128, 128, 128, 0.434);
     border-radius: 1rem;
 }
@@ -165,13 +173,21 @@ button:hover {
 }
 
 .box_place_answers {
+    position: relative;
     width: 80%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1.25rem;
     margin-top: 1.25rem;
+}
+
+.cover_answers {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .answer {
@@ -184,6 +200,7 @@ button:hover {
     border-radius: 2rem;
     padding: 0.5rem 0.6rem;
     font-weight: 600;
+    margin-top: 1.25rem;
 }
 
 .answer_right {
@@ -373,4 +390,53 @@ button:hover {
     font-weight: 600;
 }
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1201px) {
+    .quiz_box-1,
+    .quiz_box-3 {
+        display: none;
+    }
+    .quiz_box-2 {
+        height: 82.5%;
+        width: 70%;
+    }
+    .place_quiz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .box_start_end_game {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .box_start_end_game {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .box_start_end_game {
+        width: 90%;
+        height: 85%;
+    }
+    .quiz_box-2 {
+        height: 85%;
+        width: 90%;
+    }
+    .place_back_next {
+        flex: 0.7;
+        padding: 0;
+    }
+    .questions {
+        display: none;
+    }
+    .counter {
+        padding-left: 0.5rem;
+    }
+    .box_place_answers {
+        flex: 1;
+    }
+}
